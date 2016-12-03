@@ -1,0 +1,39 @@
+body {
+  background-color: #272832;
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  text-align: center;
+  padding: 5px;
+  border-bottom: 1px solid white;
+}
+
+h1 {
+  color: #4fdbde;
+  font-size: 60px;
+  display: inline-block;
+}
+
+img {
+  display: inline-block;
+}
+
+.suggestion {
+  margin: 10px;
+  color: white;
+  border-bottom: 1px solid white;
+  padding-bottom: 20px;
+}
+
+.suggestion .title {
+  font-size: 26px;
+}
+
+.upvotes {
+  margin-left: 5px;
+}
+
+a {
+  color: #4fdbde;
+}
