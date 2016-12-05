@@ -23,6 +23,14 @@
             <a href="#">Commments</a>
           </div>
         </div>
+
+        <form ng-submit="addSuggestion()">
+          <h3>Submit your suggestion</h3>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="New ideas go here!" ng-model="title"></input>
+          </div>
+          <button type="submit" class="btn btn-primary">Suggest</button>
+        </form>
       </main>
 
     <!-- Modules -->
