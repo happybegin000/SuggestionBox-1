@@ -19,6 +19,11 @@ img {
   display: inline-block;
 }
 
+.suggestions {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
 .suggestion {
   margin: 10px;
   color: white;
@@ -30,16 +35,8 @@ img {
   font-size: 26px;
 }
 
-.upvotes {
-  margin-left: 5px;
-}
-
 a {
   color: #4fdbde;
-}
-
-form {
-  margin-top: 50px;
 }
 
 form h3 {

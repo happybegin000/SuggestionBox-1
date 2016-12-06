@@ -17,5 +17,9 @@ app.controller('HomeController', [
       };
     };
 
+    $scope.upvote = (post) => {
+      post.upvotes++;
+    };
+
   }
 ]);
