@@ -7,6 +7,7 @@ app.controller('HomeController', [
     $scope.addSuggestion = function () {
       if ($scope.title.trim() !== "") { 
         let suggestion = {
+          id: $scope.posts.length,
           title: $scope.title,
           upvotes: 0,
           comments: []
