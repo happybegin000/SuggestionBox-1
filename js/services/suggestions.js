@@ -1,4 +1,4 @@
-app.factory('suggestions', [ () => {
+app.factory('suggestions', [function () {
 
   let demoSuggestions = {
     posts: [

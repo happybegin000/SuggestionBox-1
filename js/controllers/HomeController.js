@@ -4,7 +4,7 @@ app.controller('HomeController', [
   function ($scope, suggestions) {
     $scope.posts = suggestions.posts;
 
-    $scope.addSuggestion = () => {
+    $scope.addSuggestion = function () {
       if ($scope.title.trim() !== "") { 
         let suggestion = {
           title: $scope.title,
@@ -17,7 +17,7 @@ app.controller('HomeController', [
       };
     };
 
-    $scope.upvote = (post) => {
+    $scope.upvote = function (post) {
       post.upvotes++;
     };
   }
