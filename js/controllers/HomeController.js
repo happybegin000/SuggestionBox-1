@@ -1,7 +1,7 @@
 app.controller('HomeController', [
   '$scope',
   'suggestions',
-  ($scope, suggestions) => {
+  function ($scope, suggestions) {
     $scope.posts = suggestions.posts;
 
     $scope.addSuggestion = () => {
@@ -20,6 +20,5 @@ app.controller('HomeController', [
     $scope.upvote = (post) => {
       post.upvotes++;
     };
-
   }
 ]);

@@ -6,34 +6,18 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
     <link rel="stylesheet" href="/css/stylesheet.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.6.0-rc.2/angular-route.min.js" type="text/javascript"></script>
   </head>
   <body ng-app="SuggestionBox" ng-controller="HomeController">
    
-      <main class="col-md-6 col-md-offset-3">
-        <header>
-          <img src="img/logo.png" />
-          <h1>Suggestion Box</h1>
-        </header>
-
-        <div class="suggestions">
-          <div class="suggestion" ng-repeat="post in posts | orderBy: '-upvotes'">
-            <p class="title">{{ post.title }}</p>
-            <p>
-              <span class="glyphicon glyphicon-plus-sign" ng-click="upvote(post)"></span>
-              Upvotes: {{ post.upvotes }} | 
-              <a href="#">Commments</a>
-            </p>
-          </div>
-        </div>
-
-        <form ng-submit="addSuggestion()">
-          <h3>Submit your suggestion</h3>
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="New ideas go here!" ng-model="title"></input>
-          </div>
-          <button type="submit" class="btn btn-primary">Suggest</button>
-        </form>
-      </main>
+    <main class="col-md-6 col-md-offset-3">
+      <header>
+        <img src="img/logo.png" />
+        <h1>Suggestion Box</h1>
+      </header>
+      
+      <div ng-view></div>
+    </main>
 
     <!-- Modules -->
     <script src="js/app.js"></script>
