@@ -6,12 +6,15 @@ app.controller('SuggestionController', [
     $scope.post = suggestions.posts[$routeParams.id];
     
     $scope.addComment = function () {
-      let comment = {
-        body: $scope.body,
-        upvotes: []
-      };
+      if ($scope.body.trim() !== "") {
+        let comment = {
+          body: $scope.body,
+          upvotes: 0 
+        };
 
-      $scope.post.comments.push(comment);
+        $scope.post.comments.push(comment);
+        $scope.body = "";
+      };
     };
 
     $scope.upvote = function (comment) {

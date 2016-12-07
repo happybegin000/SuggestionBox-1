@@ -1,4 +1,5 @@
 body {
+  color: white;
   background-color: #272832;
   font-family: 'Open Sans', sans-serif;
 }
@@ -7,6 +8,8 @@ header {
   text-align: center;
   padding: 5px;
   border-bottom: 1px solid white;
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
 
 h1 {
@@ -20,7 +23,6 @@ img {
 }
 
 .suggestions {
-  margin-top: 50px;
   margin-bottom: 50px;
 }
 
@@ -41,4 +43,23 @@ a {
 
 form h3 {
   color: #4fdbde;
+}
+
+#suggestion {
+  margin-left: 20px;
+}
+
+.comments {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.comments h4 {
+  margin-bottom: 20px;
+}
+
+.comment {
+  margin-bottom: 20px;
+  margin-left: 20px;
+  border-bottom: 1px solid white;
 }

@@ -1,1 +1,22 @@
-<h1>{{post.title}}</h1>
+<h4>Suggestion:</h4>
+<h2 id="suggestion">{{ post.title }}</h2>
+
+<div class="comments">
+  <h4 ng-if="post.comments.length == 0">There are no comments.</h4>
+  <h4 ng-if="post.comments.length > 0">Showing {{ post.comments.length}} comment(s):</h4>
+  <div class="comment" ng-repeat="comment in post.comments | orderBy: '-upvotes'">
+    <p>{{ comment.body }}</p>
+    <p>
+      <span class="glyphicon glyphicon-plus-sign" ng-click="upvote(comment)"></span>
+      Upvotes: {{ comment.upvotes }}
+    </p>
+  </div>
+</div>
+
+<form ng-submit="addComment()">
+  <h3>Submit your comment</h3>
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Your thoughts on this suggestion go here!" ng-model="body"></input>
+  </div>
+  <button type="submit" class="btn btn-primary">Comment</button>
+</form>
