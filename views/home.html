@@ -2,17 +2,17 @@
   <div class="suggestion" ng-repeat="post in posts | orderBy: '-upvotes'">
     <p class="title">{{ post.title }}</p>
     <p>
-      <span class="glyphicon glyphicon-plus-sign" ng-click="upvote(post)"></span>
+      <span class="glyphicon glyphicon-plus-sign" ng-click="upvote(post)"></span> <!--注意这里的post，不用Index,index记录repeat的数组数，这边order了，不对应 -->
       Upvotes: {{ post.upvotes }} | 
-      <a href="#!/suggestion/{{post.id}}">Commments</a>
+      <a href="#!/suggestion/{{post.id}}">Commments</a>  <!--这个跳转注意用post.id，不是$index -->
     </p>
   </div>
 </div>
 
-<form ng-submit="addSuggestion()">
+<form ng-submit="addSuggestion()">  <!--function -->
   <h3>Submit your suggestion</h3>
   <div class="form-group">
-    <input type="text" class="form-control" placeholder="New ideas go here!" ng-model="title"></input>
+    <input type="text" class="form-control" placeholder="New ideas go here!" ng-model="title"></input> <!--注意这里的input里的title，在controller里作为可以写入的，这就是输入的name -->
   </div>
   <button type="submit" class="btn btn-primary">Suggest</button>
 </form>
